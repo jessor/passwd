@@ -7,13 +7,21 @@
     #body-wrapper
       #wrapper
         %h1 passw.de (/pɑːswd/)
-        %p You can has sekkure passwurdz nao =)
+        %p You can has sekkure passwurdz wis flavur nao =)
         #passwords
           #left
+            %h2 Simple
             %ol
               - generate_passwords(simple).each do |password|
                 %li== #{password}
+          #middle
+            %h2 Nice
+            %ol
+              - generate_passwords(nice).each do |password|
+                %li== #{password}
           #right
-            %ol.special
+            %h2 Sophisticated
+            %ol
               - generate_passwords(special).each do |password|
                 %li== #{password}
+
