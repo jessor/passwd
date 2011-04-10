@@ -38,6 +38,5 @@ get '/stylesheet.css' do
 end
 
 get '/' do
-  @passwords = Array.new
   haml :show
 end
