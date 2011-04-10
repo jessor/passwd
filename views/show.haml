@@ -4,4 +4,16 @@
     %title passw.de - Random Password Generator
     %link{ :rel => 'stylesheet', :href => '/stylesheet.css' }
   %body
-    ...
+    #body-wrapper
+      #wrapper
+        %h1 passw.de (/pɑːswd/)
+        %p You can has sekkure passwurdz nao =)
+        #passwords
+          #left
+            %ol
+              - generate_passwords(simple).each do |password|
+                %li== #{password}
+          #right
+            %ol.special
+              - generate_passwords(special).each do |password|
+                %li== #{password}
